@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @relation.item_id %>
+</p>
+
+<p>
+  <strong>Itemable:</strong>
+  <%= @relation.itemable_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @relation.type_id %>
+</p>
+
+<%= link_to 'Edit', edit_relation_path(@relation) %> |
+<%= link_to 'Back', relations_path %>

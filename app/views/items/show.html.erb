@@ -1,0 +1,24 @@
+<h1><i><%= @item.format.name %>:</i> <%= @item.name %></h1>
+<p>
+  <strong>First Parent:</strong>
+  <%= link_to @item.parents.first.name, @item.parents.first %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @item.content %>
+</p>
+
+
+<%= render "layouts/display_children" %>
+
+
+
+
+
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>|
+<%= link_to 'Previous', items_path %>|
+<%= link_to 'Next', items_path %>

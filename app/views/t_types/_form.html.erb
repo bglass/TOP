@@ -1,0 +1,41 @@
+<%= form_for(@t_type) do |f| %>
+  <% if @t_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@t_type.errors.count, "error") %> prohibited this t_type from being saved:</h2>
+
+      <ul>
+      <% @t_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :fields %><br>
+    <%= f.text_field :fields %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :children %><br>
+    <%= f.text_field :children %>
+  </div>
+  <div class="field">
+    <%= f.label :relations %><br>
+    <%= f.text_field :relations %>
+  </div>
+  <div class="field">
+    <%= f.label :extras %><br>
+    <%= f.text_field :extras %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Listing items</h1>
+
+  <nav id="actions" class="round">
+    <ul>
+      <li><%= link_to 'New Item', new_item_path %>
+    </ul>
+  </nav>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Item</th>
+      <th>Name</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.type.name %></td>
+        <td><%= link_to item.name, item %></td>
+        <td><%= link_to item.content, item %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% render "layouts/section.end" %>

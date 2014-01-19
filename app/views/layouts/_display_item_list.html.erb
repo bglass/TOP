@@ -1,0 +1,31 @@
+<% 	itemformats = Format.find(:all, :order => 'priority') %>
+<% 	itemformats.each do |relation_format| %>
+
+<% 	selection = Item.where(["format_id=?",relation_format.id]) %>
+
+
+
+
+
+
+<% 		if selection.count > 0 %>
+
+<div class="container">
+	<section class="round">
+		<h2> <%= relation_format.name %> </h2>
+
+		<table>
+			<tbody>
+				<% selection.each do |item| %>
+				<tr>
+					<td><%= link_to item.name, item %></td>
+					<td><%= link_to item.content, item %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</section>
+</div>
+
+<% 		end %>
+<% 	end %>

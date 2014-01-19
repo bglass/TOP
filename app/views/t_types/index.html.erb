@@ -1,0 +1,37 @@
+<h1>Listing t_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Fields</th>
+      <th>Priority</th>
+      <th>Children</th>
+      <th>Relations</th>
+      <th>Extras</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @t_types.each do |t_type| %>
+      <tr>
+        <td><%= t_type.name %></td>
+        <td><%= t_type.fields %></td>
+        <td><%= t_type.priority %></td>
+        <td><%= t_type.children %></td>
+        <td><%= t_type.relations %></td>
+        <td><%= t_type.extras %></td>
+        <td><%= link_to 'Show', t_type %></td>
+        <td><%= link_to 'Edit', edit_t_type_path(t_type) %></td>
+        <td><%= link_to 'Destroy', t_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New T type', new_t_type_path %>

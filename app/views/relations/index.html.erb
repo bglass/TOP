@@ -1,0 +1,29 @@
+<h1>Listing relations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Parent</th>
+      <th>Child</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @relations.each do |relation| %>
+      <tr>
+        <td><%= relation.name %></td>
+        <td><%= relation.type.name %></td>
+        <td><%= relation.parent.name %></td>
+        <td><%= relation.child.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Relation', new_relation_path %>

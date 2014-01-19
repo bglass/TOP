@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @t_type.name %>
+</p>
+
+<p>
+  <strong>Fields:</strong>
+  <%= @t_type.fields %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @t_type.priority %>
+</p>
+
+<p>
+  <strong>Children:</strong>
+  <%= @t_type.children %>
+</p>
+
+<p>
+  <strong>Relations:</strong>
+  <%= @t_type.relations %>
+</p>
+
+<p>
+  <strong>Extras:</strong>
+  <%= @t_type.extras %>
+</p>
+
+<%= link_to 'Edit', edit_t_type_path(@t_type) %> |
+<%= link_to 'Back', t_types_path %>

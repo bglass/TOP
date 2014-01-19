@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fields: MyString
+  priority: 1
+  children: MyString
+  relations: MyString
+  extras: MyString
+
+two:
+  name: MyString
+  fields: MyString
+  priority: 1
+  children: MyString
+  relations: MyString
+  extras: MyString

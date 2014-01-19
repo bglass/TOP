@@ -1,0 +1,19 @@
+<%  childrenformats = [11,12,13,14,15,16,17,18,19,20] %>
+<%  childrenformats.each do |childformat| %>
+<%		relations = Relation.where(["parent_id=? AND format_id=?", @item.id, childformat]) %>
+<%		if relations.count > 0 %>
+<h3>        <%= Format.find(childformat).name %>        </h3>
+
+<% else %>
+<h3>(<%= Format.find(childformat).name %>)</h3>
+<% end %>
+<%		relations.each do |relation| %>
+<%=			link_to relation.child.name, relation.child %><br>
+<%		end %>
+<%	end %>
+
+
+
+
+
+
